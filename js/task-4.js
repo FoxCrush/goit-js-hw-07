@@ -12,7 +12,10 @@ const decrement = () => {
     counterValue -= 1;
     valueEL.textContent = counterValue;
 };
-const reset = () => (valueEL.textContent = 0);
+const reset = () => {
+    counterValue = 0;
+    valueEL.textContent = counterValue;
+};
 const bodyClickFn = () => {
 
     if (event.target.dataset.action === 'increment') {
