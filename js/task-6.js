@@ -4,10 +4,12 @@ console.log(validationInputEl.dataset.length)
 const checkInputLength = () => {
     if (validationInputEl.value.length === Number(validationInputEl.dataset.length)) {
         console.log('length is equal')
-        validationInputEl.classList.replace('invalid', 'valid')
+        validationInputEl.classList.remove('invalid');
+        validationInputEl.classList.add('valid');
     } else {
         console.log('script fails')
-        validationInputEl.classList.add('valid','invalid')
+        validationInputEl.classList.remove('valid');
+        validationInputEl.classList.add('invalid');
     }
     console.log(validationInputEl.classList)
 }
